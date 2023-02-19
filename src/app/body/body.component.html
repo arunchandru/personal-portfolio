@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="sidebar" style="background-color: #fff;color: black;">
+        <h4>Admin portal</h4>
+        <ul>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><a routerLink="/"  >Overview</a></li>
+            <li routerLinkActive="active"><a routerLink="/signup" >Signup</a></li>
+            <li routerLinkActive="active"><a routerLink="/login" >Login</a></li>
+            <li routerLinkActive="active"><a routerLink="/error" >404 Error</a></li>
+            <li routerLinkActive="active"><a routerLink="/account" >Account </a></li>
+            <li routerLinkActive="active"><a routerLink="/userhelp" >Help </a></li>
+            <li routerLinkActive="active"><a routerLink="/notifications" >Notifications </a></li>
+
+
+
+         </ul>
+    </div>
+    <div class="main_content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
