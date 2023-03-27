@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserhelpService } from 'src/app/model/userhelp';
 
 @Component({
   selector: 'app-userhelp',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserhelpComponent implements OnInit {
 
-  constructor() { }
+  helpCenter:any;
+  test:any="help";
+
+  constructor( private userhelpService : UserhelpService) { }
 
   ngOnInit(): void {
+
+    this.helpCenter = this.userhelpService.helpCenter;
+
   }
+
+ 
 
 }

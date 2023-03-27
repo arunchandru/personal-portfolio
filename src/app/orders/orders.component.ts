@@ -10,22 +10,19 @@ import { Orders } from 'src/app/model/orders'
 export class OrdersComponent implements OnInit {
 
   ordersAllData:any;
-  ordersPaidData:any;
-  ordersPendingData:any;
-  ordersUnpaidData:any;
+ 
 
   constructor( private order : Orders) {
 
-    this.order.users().subscribe((data)=>{
-      this.ordersAllData = data;
-      console.log(this.ordersAllData)
-    })
+  
    }
     
   ngOnInit(): void {
-    this.ordersPaidData=this.order.ordersPaidDetails;
-    this.ordersPendingData=this.order.ordersPendingDetails;
-    this.ordersUnpaidData=this.order.ordersUnpaidDetails;
+    // this.ordersPaidData=this.order.ordersPaidDetails;
+    // this.ordersPendingData=this.order.ordersPendingDetails;
+    // this.ordersUnpaidData=this.order.ordersUnpaidDetails;
+
+  
 
     // this.ordersAllData.push(this.ordersPaidData[0],this.ordersPaidData[1],this.ordersPendingData[0],this.ordersPendingData[1],this.ordersUnpaidData[0]);
     
@@ -38,8 +35,19 @@ export class OrdersComponent implements OnInit {
     // for (let i=0;i<this.ordersUnpaidData.length;i++){
     //   this.ordersAllData.push(this.ordersUnpaidData[i]);
     // }
-
+    this.getOrdersByStatus('')
 
   }
 
+ 
+
+  getOrdersByStatus(status:any){
+    this.order.getOrdersList(status).subscribe((data)=>{
+      this.ordersAllData = data;
+    })
+  }
+
+  firstname:any="arun";
+  lastname:any="kumar";
+  fullname:any=this.firstname + this.lastname;
 }

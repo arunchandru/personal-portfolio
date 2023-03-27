@@ -18,6 +18,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { SettingsComponent } from './settings/settings.component';
 import { HeaderComponent } from './header/header.component';
 import { DocsComponent } from './docs/docs.component';
+import { ChummaComponent } from './chumma/chumma.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DocsComponent } from './docs/docs.component';
     ResetPasswordComponent,
     SettingsComponent,
     HeaderComponent,
-    DocsComponent
+    DocsComponent,
+    ChummaComponent
   ],
   imports: [
     BrowserModule,

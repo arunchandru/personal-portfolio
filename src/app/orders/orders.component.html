@@ -1,15 +1,15 @@
 <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link " id="paid-tab" data-bs-toggle="tab" data-bs-target="#paid" type="button" role="tab" aria-controls="paid" aria-selected="true">Paid</button>
+      <button class="nav-link " id="paid-tab" data-bs-toggle="tab" data-bs-target="#paid" type="button" role="tab" aria-controls="paid" aria-selected="true" (click)="getOrdersByStatus('paid')">Paid</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button" role="tab" aria-controls="pending" aria-selected="false">Pending</button>
+      <button class="nav-link" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending" type="button" role="tab" aria-controls="pending" aria-selected="false" (click)="getOrdersByStatus('pending')">Pending</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="unpaid-tab" data-bs-toggle="tab" data-bs-target="#unpaid" type="button" role="tab" aria-controls="unpaid" aria-selected="false">Unpaid</button>
+      <button class="nav-link" id="unpaid-tab" data-bs-toggle="tab" data-bs-target="#unpaid" type="button" role="tab" aria-controls="unpaid" aria-selected="false" (click)="getOrdersByStatus('unpaid')">Unpaid</button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="unpaid-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="false">all</button>
+        <button class="nav-link active" id="unpaid-tab" data-bs-toggle="tab" data-bs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="false" (click)="getOrdersByStatus('')">all</button>
       </li>
 </ul>
 
@@ -28,7 +28,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let data of ordersPaidData">
+                <tr *ngFor="let data of ordersAllData">
                     <td>{{data.id}}</td>
                     <td>{{data.product}}</td>
                     <td>{{data.customer}}</td>
@@ -54,7 +54,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let data of ordersPendingData">
+                <tr *ngFor="let data of ordersAllData">
                     <td>{{data.id}}</td>
                     <td>{{data.product}}</td>
                     <td>{{data.customer}}</td>
@@ -80,7 +80,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let data of ordersUnpaidData">
+                <tr *ngFor="let data of ordersAllData">
                     <td>{{data.id}}</td>
                     <td>{{data.product}}</td>
                     <td>{{data.customer}}</td>

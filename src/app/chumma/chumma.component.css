@@ -1,0 +1,11 @@
+.navbar{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background: rgb(83, 150, 83);
+    
+}
+.btn{
+    background-color: rgb(246, 245, 245);
+    color: black;
+}

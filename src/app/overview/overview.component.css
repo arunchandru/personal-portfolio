@@ -2,13 +2,25 @@
     background: #F5F5F5;
     margin-left: -20px;
     margin-right: -20px;
-    margin-top: -20px;
+    margin-top: 65px;
 }
 
 .border-left-decoration{
+
     border-left: 4px solid green;
+
+     
 }
 
 .stats-type{
-    opacity: 0.5;
+    opacity: 0.5;  
+}
+
+.viewreport{
+    text-decoration: none;
+    
+}
+.allprojects{
+    text-decoration: none;
+
 }

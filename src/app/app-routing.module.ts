@@ -10,10 +10,15 @@ import { SignupComponent } from './signup/signup.component';
 import { UserhelpComponent } from './userhelp/userhelp.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { DocsComponent } from './docs/docs.component';
+import { SettingsComponent } from './settings/settings.component';
+import { ChummaComponent } from './chumma/chumma.component';
+
 
 
 const routes: Routes = [
+
   {path:"",component:OverviewComponent},
+  {path:"chumma",component:ChummaComponent},
   {path:"overview",component:OverviewComponent},
   {path:"login",component:LoginComponent},
   {path:"docs",component:DocsComponent},
@@ -24,10 +29,8 @@ const routes: Routes = [
   {path:"userhelp",component:UserhelpComponent},
   {path:"orders",component:OrdersComponent},
   {path:"reset-password",component:ResetPasswordComponent},
-
-
-
-  
+  {path:"settings",component:SettingsComponent},
+ 
 ];
 
 @NgModule({

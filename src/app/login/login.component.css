@@ -3,3 +3,6 @@
     background-image: url(/assets/background/background-1.jpg);
     min-height: 700px;
 }
+.app-auth-wrapper{
+    margin-top: 65px;
+}
